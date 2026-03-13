@@ -1,10 +1,231 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Home Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eBook Store - Learn Entrepreneurship & Technology</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Welcome to the Home Page!</h1>
-    <p>Current Date and Time: 2026-03-13 19:52:18 UTC</p>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-book"></i> eBook Store
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link active">Home</a></li>
+                <li><a href="store.html" class="nav-link">Store</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Unlock Your Potential with Digital Learning</h1>
+            <p>Discover professional eBooks on entrepreneurship and technology. Affordable, instant delivery, and backed by M-Pesa payment.</p>
+            <a href="store.html" class="btn btn-primary">View eBooks</a>
+        </div>
+    </section>
+
+    <!-- Featured eBooks -->
+    <section class="featured" id="featured">
+        <div class="container">
+            <h2>Featured eBooks</h2>
+            <div class="ebook-grid">
+                <div class="ebook-card">
+                    <div class="ebook-image">
+                        <img src="https://via.placeholder.com/250x350/001f3f/ffffff?text=Entrepreneurship+101" alt="Entrepreneurship 101">
+                    </div>
+                    <div class="ebook-info">
+                        <h3>Entrepreneurship 101</h3>
+                        <p class="author">By John Smith</p>
+                        <p class="description">A complete guide to starting your own business from scratch.</p>
+                        <p class="price">350 MZN</p>
+                        <button class="btn btn-secondary" onclick="openPaymentModal('Entrepreneurship 101', 350, 'EB001')">Buy Now</button>
+                    </div>
+                </div>
+
+                <div class="ebook-card">
+                    <div class="ebook-image">
+                        <img src="https://via.placeholder.com/250x350/001f3f/ffffff?text=Web+Development" alt="Web Development">
+                    </div>
+                    <div class="ebook-info">
+                        <h3>Web Development Basics</h3>
+                        <p class="author">By Sarah Johnson</p>
+                        <p class="description">Learn HTML, CSS, and JavaScript from fundamentals to advanced.</p>
+                        <p class="price">400 MZN</p>
+                        <button class="btn btn-secondary" onclick="openPaymentModal('Web Development Basics', 400, 'EB002')">Buy Now</button>
+                    </div>
+                </div>
+
+                <div class="ebook-card">
+                    <div class="ebook-image">
+                        <img src="https://via.placeholder.com/250x350/001f3f/ffffff?text=Digital+Marketing" alt="Digital Marketing">
+                    </div>
+                    <div class="ebook-info">
+                        <h3>Digital Marketing Masterclass</h3>
+                        <p class="author">By Michael Chen</p>
+                        <p class="description">Master social media, SEO, and email marketing strategies.</p>
+                        <p class="price">380 MZN</p>
+                        <button class="btn btn-secondary" onclick="openPaymentModal('Digital Marketing Masterclass', 380, 'EB003')">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits">
+        <div class="container">
+            <h2>Why Choose Us?</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <i class="fas fa-download"></i>
+                    <h3>Instant Download</h3>
+                    <p>Access your eBooks immediately after payment confirmation</p>
+                </div>
+                <div class="benefit-card">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h3>M-Pesa Payment</h3>
+                    <p>Easy and secure payment via M-Pesa for Mozambique users</p>
+                </div>
+                <div class="benefit-card">
+                    <i class="fas fa-whatsapp"></i>
+                    <h3>WhatsApp Support</h3>
+                    <p>Quick confirmation and support via WhatsApp</p>
+                </div>
+                <div class="benefit-card">
+                    <i class="fas fa-lock"></i>
+                    <h3>Secure & Safe</h3>
+                    <p>Your payment information is completely secure</p>
+                </div>
+                <div class="benefit-card">
+                    <i class="fas fa-star"></i>
+                    <h3>Quality Content</h3>
+                    <p>Professional, well-written eBooks from industry experts</p>
+                </div>
+                <div class="benefit-card">
+                    <i class="fas fa-headset"></i>
+                    <h3>24/7 Support</h3>
+                    <p>We're here to help you whenever you need us</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <h2>What Our Customers Say</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p>"The eBooks are well-written and exactly what I needed to start my business. Highly recommended!"</p>
+                    <p class="author">- Maria Silva, Entrepreneur</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p>"Great quality content and super easy payment process. The WhatsApp confirmation was very convenient."</p>
+                    <p class="author">- João Santos, Web Developer</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p>"I learned so much from these eBooks. Worth every penny! The support team is amazing."</p>
+                    <p class="author">- Ana Costa, Student</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Payment Modal -->
+    <div id="paymentModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closePaymentModal()">&times;</span>
+            <h2>Complete Your Payment</h2>
+            
+            <div class="payment-info">
+                <div class="info-item">
+                    <label>Product:</label>
+                    <p id="productName"></p>
+                </div>
+                <div class="info-item">
+                    <label>Price:</label>
+                    <p id="productPrice"></p>
+                </div>
+                <div class="info-item">
+                    <label>Reference ID:</label>
+                    <p id="productRef"></p>
+                </div>
+            </div>
+
+            <div class="payment-instructions">
+                <h3>How to Pay:</h3>
+                <ol>
+                    <li>Open M-Pesa on your phone</li>
+                    <li>Select "Send Money"</li>
+                    <li>Enter the merchant number shown below</li>
+                    <li>Enter the amount displayed above</li>
+                    <li>Use the Reference ID as your transaction reference</li>
+                    <li>Complete the transaction</li>
+                </ol>
+            </div>
+
+            <div class="merchant-info">
+                <p><strong>M-Pesa Merchant Number:</strong></p>
+                <p class="merchant-number">+258 87 XXXXXXXX</p>
+                <small>Replace X's with actual merchant number</small>
+            </div>
+
+            <button class="btn btn-success" onclick="sendWhatsAppConfirmation()">
+                <i class="fab fa-whatsapp"></i> Send Payment Proof via WhatsApp
+            </button>
+            <button class="btn btn-secondary" onclick="closePaymentModal()">Cancel</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>About eBook Store</h4>
+                    <p>Your trusted digital learning partner in Mozambique, helping young people achieve their entrepreneurial and technology dreams.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="store.html">Store</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 eBook Store. All rights reserved. | Empowering Mozambique through Digital Learning</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
